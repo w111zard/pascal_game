@@ -12,7 +12,7 @@ implementation
 
 function is_border(x, y: integer): boolean;
 begin
-    if (x = 1) or (y = 1) or (x = W) or (y = H) then
+    if (x = 1) or (y = 1) or (x = 20) or (y = 20) then
         is_border := true
     else
         is_border := false
@@ -22,9 +22,9 @@ procedure level_add_borders(var layer: char_array_t);
 var
     x, y: integer;
 begin
-    for y := 1 to H do
+    for y := 1 to 20 do
     begin
-        for x := 1 to W do
+        for x := 1 to 20 do
         begin
             if is_border(x, y) then
                 layer[y, x] := '#'

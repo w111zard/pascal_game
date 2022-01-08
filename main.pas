@@ -6,7 +6,8 @@ var
 begin
     display_clear();
     
-    level_add_borders();
+    level_add_borders(level_main);
+    display_show_area(level_main);
     readln();
 
     display_clear();     
