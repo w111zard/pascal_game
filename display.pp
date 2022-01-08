@@ -33,7 +33,8 @@ end;
 
 procedure display_show(x, y: integer; obj: char);
 begin
-    GotoXY(x, y);
+    { добавляем пробел по оси x после каждого символа } 
+    GotoXY(2*x - 1, y);
     write(obj);
     GotoXY(1, 1)
 end;
